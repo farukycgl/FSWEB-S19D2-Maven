@@ -95,7 +95,6 @@ class MainTest {
         sampleAddressForAddressEntity.setStreet("Main Street");
         sampleAddressForAddressEntity.setNo(100);
         sampleAddressForAddressEntity.setCity("Sample City");
-        sampleAddressForAddressEntity.setCountry("Sample Country");
         sampleAddressForAddressEntity.setDescription("Near the big landmark");
 
         sampleCustomerForCustomerEntityTest = new Customer();
@@ -131,7 +130,6 @@ class MainTest {
         sampleAddressForAddressRepositoryTest.setStreet("Main Street");
         sampleAddressForAddressRepositoryTest.setNo(42);
         sampleAddressForAddressRepositoryTest.setCity("Sample City");
-        sampleAddressForAddressRepositoryTest.setCountry("Sample Country");
         sampleAddressForAddressRepositoryTest.setDescription("Near the park");
         entityManager.persistFlushFind(sampleAddressForAddressRepositoryTest);
 
@@ -139,7 +137,6 @@ class MainTest {
         address.setStreet("Main Street");
         address.setNo(42);
         address.setCity("Sample City");
-        address.setCountry("Sample Country");
         entityManager.persist(address);
 
         sampleCustomerForCustomerRepositoryTest = new Customer();
@@ -183,7 +180,6 @@ class MainTest {
         assertEquals("Main Street", sampleAddressForAddressEntity.getStreet());
         assertEquals(100, sampleAddressForAddressEntity.getNo());
         assertEquals("Sample City", sampleAddressForAddressEntity.getCity());
-        assertEquals("Sample Country", sampleAddressForAddressEntity.getCountry());
         assertEquals("Near the big landmark", sampleAddressForAddressEntity.getDescription());
 
         // Testing nullability for description
